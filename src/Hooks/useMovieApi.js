@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export const API_KEY = 'db75be3f6da59e6c54d0b9f568d19d16';
+export const API_KEY = '';
 export const BASE_URL = 'https://api.themoviedb.org/3/';
 export const IMAGE_BASE_URL = 'https://image.tmdb.org/'
 
