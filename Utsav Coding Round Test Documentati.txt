@@ -1,0 +1,108 @@
+Utsav Coding Round Test Documentation
+
+Overview
+
+This documentation provides an overview of the implementation for the Utsav Full Stack Web Development Test. The project involves creating a responsive website with two pages: a landing page and a movie details page. The landing page displays various movie sections, and users can navigate to the movie details page by clicking on a movie. The website fetches data from The Movie Database (TMDb) API to display movie information.
+
+Table of Contents
+
+Deployment
+GitHub Repository
+Technology Stack
+Features
+Code Structure
+Styling
+Responsiveness
+Pagination
+Search Functionality
+Movie Details Page
+API Integration
+Error Handling
+Components & Pages
+customehooks
+
+Deployment
+The website is deployed and can be accessed at https://utsav-coding.netlify.app/.
+
+GitHub Repository
+The source code is available on GitHub at https://github.com/dineshs25/utsav-coding.
+
+Note: while running application locally add the API_KEY in customHook(Hooks/useMovieApi.js).
+
+Technology Stack
+Frontend Framework: React.js
+Styling: Module CSS
+API: The Movie Database (TMDb) API
+Features
+Landing Page:
+
+Our Genres, Upcoming Movies, Latest Movies, Top-rated Movies, Popular Movies sections.
+Responsive grid layout for movie items.
+Navigation bar with logo, menu/navigation, and search bar.
+Pagination for each section.
+Navigation:
+
+Clicking on a navigation menu item takes the user to the corresponding section.
+Search Functionality:
+
+Dynamically updates the page with search results on entering a keyword.
+Clicking on a movie in search results redirects to the movie details page.
+Pagination:
+
+Provides total pages, current page no., and previous/next options.
+Movie Details Page:
+
+Displays detailed information about a selected movie.
+Includes language, title, overview, popularity, genres, release date, origin country, vote count, vote average, budget, revenue, and a link to the homepage.
+Reviews section with author details, content, and creation date.
+Similar movies section with title, poster, and brief overview.
+Code Structure
+The project follows a modular code structure with separate components for the landing page, navigation, movie details page, and more. The code is organized to enhance readability and maintainability.
+
+Styling
+Styling is implemented using module CSS to encapsulate styles within components and prevent global conflicts. This approach improves code maintainability and promotes a clean structure.
+
+Responsiveness
+The website is designed to be responsive, ensuring a seamless user experience across various devices and screen sizes.
+
+Pagination
+Pagination is implemented for each section on the landing page, allowing users to navigate through multiple pages of movie listings.
+
+Search Functionality
+The search functionality dynamically updates the page with relevant search results. Clicking on a movie in the search results redirects the user to the movie details page.
+
+Movie Details Page
+The movie details page displays comprehensive information about a selected movie, including additional sections for reviews and similar movies.
+
+API Integration
+Data is fetched from The Movie Database (TMDb) API using the provided API key and base URL. The API responses are processed to populate the relevant sections on the website.
+
+Error Handling
+The implementation includes error handling to manage potential null values in API responses and other unexpected situations.
+
+Components
+src folder containes pages and componenst all components used in pages are stored in components folder
+
+
+Pages:
+HomePage.jsx - contains the components of home page with search useState and a customeHook call for api call with simple loading and error handling.
+MovieDeatilsPage.jsx - catches the params id and makes a api call for movies details via customeHook and displays movie related information.
+
+
+components:
+Backgroundbanner.jsx - for background of HomePage (uses BackgroundImages.js for images data)
+Carousel.jsx - contains movie card with swipping cards funcationality  this includes DescTypes, DeskatopCarousel, GenresComponent, GenresPosters, MobileCarousel, MoviePosterComponent components.
+Footer: contains footer data
+Header : conatins logo navbar and search bar with icons.
+MoviePage Folder: conatins Movies page components.
+searchPageComponent: conatins search related movies cards and funcationality with api call.
+PaginationComponen: conatins the pagination funcationality.
+UtsavSummary: Conatins the 2nd section data of the homepage.
+
+customeHooks:
+useMovieApi() : receives endspoint of api as paramaters and makes a api call returns data on some conditions also conatins getImageUrl() functions it is used to get the images path.
+
+This documentation provides a comprehensive overview of the Utsav Web Development Test implementation. If you have any questions or need further clarification, please feel free to reach out.
+
+Best regards,
+Dinesh
